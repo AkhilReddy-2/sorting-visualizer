@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>🎵 Sorting Visualizer 🎵</h1>
+        <div class="controls">
+            <button onclick="init()">Generate New Array</button>
+
+            <label for="algorithm-select">Choose an Algorithm:</label>
+            <select id="algorithm-select">
+                <option value="bubble">Bubble Sort</option>
+                <option value="selection">Selection Sort</option>
+                <option value="insertion">Insertion Sort</option>
+                <option value="merge">Merge Sort</option>
+                <option value="quick">Quick Sort</option>
+            </select>
+
+            <label for="size-select">Array Size:</label>
+            <select id="size-select">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20" selected>20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+            </select>
+
+            <label for="speed-select">Speed:</label>
+            <select id="speed-select">
+                <option value="0.5">0.5x</option>
+                <option value="1" selected>1x</option>
+                <option value="2">2x</option>
+                <option value="4">4x</option>
+                <option value="8">8x</option>
+            </select>
+
+            <button onclick="restart()">Restart</button>
+            <button onclick="play()">Start Sorting</button>
+        </div>
+    </div>
+
+    <div class="visualizer-box">
+        <canvas id="myCanvas"></canvas>
+    </div>
+
+    <script src="math.js"></script>
+    <script src="column.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
